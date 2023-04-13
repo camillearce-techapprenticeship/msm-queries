@@ -1,0 +1,48 @@
+<h1> Actor #<%= @this_actor.id %> details </h1>
+
+<p> <a href="/actors">Go back</a></p>
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @this_actor.name %>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+     <%= @this_actor.dob %>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+   <%= @this_actor.bio %>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="https://robohash.org/<%= @this_actor.image %>" style="width:250px;">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@this_actor.created_at) %> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@this_actor.updated_at) %> ago
+  </dd>
+</dl>
