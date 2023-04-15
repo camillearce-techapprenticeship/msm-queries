@@ -1,6 +1,8 @@
 class ActorsController < ApplicationController
   def index
-    @list_of_actors = Actor.all
+    matching_actors = Actor.all
+
+    @list_of_actors = matching_actors.order({ :created_at => :desc })
   
     render({ :template => "actor_templates/index.html.erb" })
   end
